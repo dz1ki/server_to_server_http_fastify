@@ -1,0 +1,24 @@
+{
+  "name": "fastify_microservices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/swagger": "^8.8.0",
+    "@fastify/swagger-ui": "^1.9.3",
+    "fastify": "^4.21.0",
+    "yamljs": "^0.3.0",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/yamljs": "^0.2.31",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
