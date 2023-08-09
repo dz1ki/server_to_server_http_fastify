@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: Server to Server Communication using HTTP.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Development server
+
+paths:
+  /calc/percent:
+    post:
+      tags:
+        - Auth
+      summary: Сalculate percentage of a number .
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/percentageNumber"
+      responses:
+        200:
+          description: Success.
+        500:
+          description: Server error.
+
+components:
+  schemas:
+    percentageNumber:
+      type: object
+      additionalProperties: false
+      required:
+        - numeric
+        - percent
+      properties:
+        numeric:
+          type: number
+          description: Numeric
+          example: 33
+        percent:
+          type: number
+          description: Percent.
+          example: 5
